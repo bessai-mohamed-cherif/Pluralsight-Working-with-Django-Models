@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+<<<<<<< HEAD
+=======
+    "crispy_forms",
+>>>>>>> fa9bec0 (fifth commit)
     'store',
 ]
 
@@ -122,12 +126,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
+=======
+STATIC_ROOT = BASE_DIR / 'static'
+MEDIA_ROOT = STATIC_ROOT / 'media'
+MEDIA_URL = '/media/'
+>>>>>>> fa9bec0 (fifth commit)
 
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
 # Log all SQL
+<<<<<<< HEAD
 # LOGGING = {
 #     "version": 1,
 #     "handlers": {"console": {"class": "logging.StreamHandler"}},
@@ -135,3 +146,14 @@ INTERNAL_IPS = [
 #     "root": {"handlers": ["console"]},
 # }
 
+=======
+LOGGING = {
+    "version": 1,
+    "handlers": {"console": {"class": "logging.StreamHandler"}},
+    "loggers": {"django.db.backends": {"level": "DEBUG"}},
+    "root": {"handlers": ["console"]},
+}
+
+# Crispy
+CRISPY_TEMPLATE_PACK = "bootstrap3"
+>>>>>>> fa9bec0 (fifth commit)
